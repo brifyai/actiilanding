@@ -123,6 +123,23 @@ img {
   z-index: 3;
 }
 
+.layer-legal,
+.mobile-legal {
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+
+.layer-legal {
+  font-size: clamp(0.6rem, 0.8vw, 0.95rem);
+  line-height: 1.15;
+}
+
+.layer-legal span,
+.mobile-legal span {
+  color: var(--accent);
+}
+
 .layer-qr-link {
   left: 90.7%;
   top: 85.9%;
@@ -267,6 +284,8 @@ img {
 
 .mobile-legal {
   width: 100%;
+  font-size: 0.8rem;
+  line-height: 1.3;
 }
 
 .sr-only {
