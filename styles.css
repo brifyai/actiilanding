@@ -89,6 +89,26 @@ img {
   z-index: 3;
 }
 
+.layer-description p,
+.mobile-description p {
+  margin: 0;
+  color: #fff;
+  font-weight: 800;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.layer-description p {
+  font-size: clamp(1.15rem, 1.85vw, 2rem);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+}
+
+.layer-description span,
+.mobile-description span {
+  color: var(--accent);
+  display: inline;
+}
+
 .layer-steps {
   left: 59.3%;
   top: 53.2%;
@@ -171,6 +191,13 @@ img {
   right: 4%;
   top: 17%;
   width: min(68vw, 320px);
+  z-index: 3;
+}
+
+.mobile-description p {
+  font-size: clamp(1.05rem, 3.5vw, 1.35rem);
+  line-height: 1.14;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.22);
 }
 
 .mobile-tv {
