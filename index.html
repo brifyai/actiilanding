@@ -17,17 +17,13 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- FONDO GLOBAL: cancha como base de toda la página -->
-    <div class="global-bg" aria-hidden="true">
-      <img class="global-bg-img" src="assets/layers/fondo.png" alt="" />
-    </div>
-
     <main class="landing" aria-labelledby="promo-title">
       <h1 id="promo-title" class="sr-only">La jugada es con ACT II</h1>
 
       <!-- DESKTOP: capas posicionadas exactamente como el PSD -->
       <section class="desktop-scene" aria-label="Landing promocional ACT II para escritorio">
         <div class="scene scene-desktop">
+          <img class="layer layer-bg" src="assets/layers/fondo.png" alt="" />
           <img class="layer layer-popcorn" src="assets/layers/popcorn.png" alt="Productos ACT II" />
           <img class="layer layer-claim" src="assets/layers/claim.png" alt="La jugada es con ACT II" />
           <img class="layer layer-tv" src="assets/layers/tv-42.png" alt="Smart TV de 43 pulgadas" />
@@ -42,6 +38,11 @@
 
       <!-- MOBILE: mismas capas, apiladas verticalmente sobre el fondo -->
       <section class="mobile-scene" aria-label="Landing promocional ACT II para móviles">
+
+        <!-- 0. Fondo cancha como base -->
+        <div class="mobile-bg-wrap">
+          <img class="mobile-bg" src="assets/layers/fondo.png" alt="" />
+        </div>
 
         <!-- 1. Claim -->
         <div class="mobile-layer-wrap">
