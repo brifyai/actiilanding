@@ -172,6 +172,27 @@ img {
   max-width: 500px;
 }
 
+.mobile-tv-popcorn-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-tv-popcorn-wrap .mobile-tv {
+  position: relative;
+  z-index: 1;
+}
+
+.mobile-tv-popcorn-wrap .mobile-popcorn {
+  position: absolute;
+  bottom: -12%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  max-width: 520px;
+  filter: drop-shadow(0 8px 32px rgba(0, 0, 0, 0.5));
+}
+
 .mobile-tv {
   max-width: 480px;
 }
