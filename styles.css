@@ -1,7 +1,5 @@
 :root {
-  --bg-top: #0b6ce3;
-  --bg-bottom: #04142f;
-  --panel: rgba(4, 18, 44, 0.94);
+  --panel: rgba(4, 18, 44, 0.92);
   --panel-border: rgba(255, 255, 255, 0.14);
   --accent: #ffe51a;
   --text: #ffffff;
@@ -30,7 +28,27 @@ img {
   max-width: 100%;
 }
 
+/* ========== FONDO GLOBAL: cancha como base ========== */
+
+.global-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: #04142f;
+}
+
+.global-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ========== LAYOUT ========== */
+
 .landing {
+  position: relative;
+  z-index: 1;
   min-height: 100vh;
 }
 
@@ -57,18 +75,10 @@ img {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: #04142f;
 }
 
 .layer {
   position: absolute;
-}
-
-.layer-bg {
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .layer-popcorn {
@@ -125,29 +135,16 @@ img {
   width: 100%;
 }
 
-/* ========== MOBILE: capas apiladas ========== */
+/* ========== MOBILE: capas sobre el fondo ========== */
 
 .mobile-scene {
   display: block;
-  background: #04142f;
-  padding-bottom: 32px;
-}
-
-.mobile-bg-wrap {
+  padding: 0 16px 32px;
   position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.mobile-bg {
-  width: 100%;
-  height: auto;
-  opacity: 0.35;
 }
 
 .mobile-layer-wrap {
   width: 100%;
-  padding: 0 16px;
   margin-top: 20px;
   display: flex;
   justify-content: center;
@@ -157,10 +154,12 @@ img {
   max-width: 560px;
   width: 100%;
   height: auto;
+  filter: drop-shadow(0 8px 32px rgba(0, 0, 0, 0.4));
 }
 
 .mobile-claim {
-  max-width: 420px;
+  max-width: 400px;
+  margin-top: 24px;
 }
 
 .mobile-description {
@@ -181,7 +180,6 @@ img {
 
 .mobile-cta-wrap {
   width: 100%;
-  padding: 0 16px;
   margin-top: 24px;
   display: flex;
   justify-content: center;
@@ -225,6 +223,7 @@ img {
   border-radius: 24px;
   background: var(--panel);
   box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
 }
 
 .mobile-qr-link {
@@ -261,8 +260,11 @@ img {
 }
 
 @media (max-width: 480px) {
+  .mobile-scene {
+    padding: 0 12px 24px;
+  }
+
   .mobile-layer-wrap {
-    padding: 0 12px;
     margin-top: 16px;
   }
 

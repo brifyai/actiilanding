@@ -17,13 +17,17 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- FONDO GLOBAL: cancha como base de toda la página -->
+    <div class="global-bg" aria-hidden="true">
+      <img class="global-bg-img" src="assets/layers/fondo.png" alt="" />
+    </div>
+
     <main class="landing" aria-labelledby="promo-title">
       <h1 id="promo-title" class="sr-only">La jugada es con ACT II</h1>
 
       <!-- DESKTOP: capas posicionadas exactamente como el PSD -->
       <section class="desktop-scene" aria-label="Landing promocional ACT II para escritorio">
         <div class="scene scene-desktop">
-          <img class="layer layer-bg" src="assets/layers/fondo.png" alt="" />
           <img class="layer layer-popcorn" src="assets/layers/popcorn.png" alt="Productos ACT II" />
           <img class="layer layer-claim" src="assets/layers/claim.png" alt="La jugada es con ACT II" />
           <img class="layer layer-tv" src="assets/layers/tv-42.png" alt="Smart TV de 43 pulgadas" />
@@ -36,47 +40,42 @@
         </div>
       </section>
 
-      <!-- MOBILE: mismas capas, apiladas verticalmente -->
+      <!-- MOBILE: mismas capas, apiladas verticalmente sobre el fondo -->
       <section class="mobile-scene" aria-label="Landing promocional ACT II para móviles">
 
-        <!-- 1. Fondo -->
-        <div class="mobile-bg-wrap">
-          <img class="mobile-bg" src="assets/layers/fondo.png" alt="" />
-        </div>
-
-        <!-- 2. Claim -->
+        <!-- 1. Claim -->
         <div class="mobile-layer-wrap">
           <img class="mobile-layer mobile-claim" src="assets/layers/claim.png" alt="La jugada es con ACT II" />
         </div>
 
-        <!-- 3. Descripción -->
+        <!-- 2. Descripción -->
         <div class="mobile-layer-wrap">
           <img class="mobile-layer mobile-description" src="assets/layers/descripcion.png" alt="Descripción de la promoción" />
         </div>
 
-        <!-- 4. TV -->
+        <!-- 3. TV -->
         <div class="mobile-layer-wrap">
           <img class="mobile-layer mobile-tv" src="assets/layers/tv-42.png" alt="Smart TV de 43 pulgadas" />
         </div>
 
-        <!-- 5. Productos -->
+        <!-- 4. Productos -->
         <div class="mobile-layer-wrap">
           <img class="mobile-layer mobile-popcorn" src="assets/layers/popcorn.png" alt="Productos ACT II" />
         </div>
 
-        <!-- 6. CTA -->
+        <!-- 5. CTA -->
         <div class="mobile-cta-wrap">
           <a class="mobile-cta" href="https://www.lajugadaconactii.cl" target="_blank" rel="noreferrer">
             Participar ahora
           </a>
         </div>
 
-        <!-- 7. Mecánica -->
+        <!-- 6. Mecánica -->
         <div class="mobile-layer-wrap">
           <img class="mobile-layer mobile-steps" src="assets/layers/mecanica.png" alt="Pasos para participar" />
         </div>
 
-        <!-- 8. QR + Legal -->
+        <!-- 7. QR + Legal -->
         <div class="mobile-footer">
           <a class="mobile-qr-link" href="https://www.lajugadaconactii.cl" target="_blank" rel="noreferrer" aria-label="Abrir sitio web de la promoción">
             <img class="mobile-qr" src="assets/layers/qr.png" alt="Código QR de la promoción" />
